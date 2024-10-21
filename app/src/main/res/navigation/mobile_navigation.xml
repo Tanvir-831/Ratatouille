@@ -22,4 +22,5 @@
         android:name="com.example.ratatouille.Fragment.NotificationsFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_notifications" />
+
 </navigation>
