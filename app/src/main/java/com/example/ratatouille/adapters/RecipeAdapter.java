@@ -16,7 +16,6 @@ import java.util.List;
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeHolder> {
 
     List<Recipe> recipeList;
-
     @NonNull
     @Override
     public RecipeAdapter.RecipeHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
