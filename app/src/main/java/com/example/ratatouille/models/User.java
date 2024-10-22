@@ -2,10 +2,8 @@ package com.example.ratatouille.models;
 
 public class User {
     private String id, name, email, image, cover;
-
     public User() {
     }
-
     public User(String id, String name, String email, String image, String cover) {
         this.id = id;
         this.name = name;

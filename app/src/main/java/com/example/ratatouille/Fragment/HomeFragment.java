@@ -35,11 +35,12 @@ List<Recipe> popularRecipes;
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         loadFavouriteRecipes();
-       loadPopularRecipes();
+        loadPopularRecipes();
     }
 
     private void loadPopularRecipes() {
-
+        binding.rvPopulars.setAdapter(new RecipeAdapter());
+        List<Recipe> popularRecipes;
         popularRecipes = new ArrayList<>();
         popularRecipes.add(new Recipe("recipe1", "recipe1", "1", "1", "1", "1", "1"));
         popularRecipes.add(new Recipe("recipe2", "recipe2", "2", "2", "2", "2", "2"));
