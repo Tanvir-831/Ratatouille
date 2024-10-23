@@ -12,9 +12,7 @@ import com.example.ratatouille.models.Recipe;
 
 import java.util.List;
 
-
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeHolder> {
-
     List<Recipe> recipeList;
     @NonNull
     @Override
@@ -38,18 +36,14 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeHold
     }
 
     public static class RecipeHolder extends RecyclerView.ViewHolder {
-
         ItemRecipeBinding binding;
-
         public RecipeHolder(@NonNull ItemRecipeBinding itemView) {
             super(itemView.getRoot());
             binding = itemView;
         }
         public  void onBind(Recipe recipe){
-
             binding.bgImgRecipe.setImageResource(recipe.getImage().equalsIgnoreCase("recipe1") ? R.drawable.recipe1 : R.drawable.recipe2);
             binding.tvRecipeName.setText(recipe.getName());
-
         }
     }
 }
