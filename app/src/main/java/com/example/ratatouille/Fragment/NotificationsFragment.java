@@ -28,7 +28,6 @@ import java.util.Objects;
 public class NotificationsFragment extends Fragment {
 
     private FragmentNotificationsBinding binding;
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -49,13 +48,12 @@ public class NotificationsFragment extends Fragment {
         RecipeAdapter adapter = new RecipeAdapter();
         binding.rvProfile.setAdapter(adapter);
 
-        // Create a list of recipes
+
         List<Recipe> recipes = new ArrayList<>();
         recipes.add(new Recipe("recipe1", "One", "1", "1", "1", "recipe1", "1"));
         recipes.add(new Recipe("recipe2", "Two", "2", "2", "2", "recipe2", "2"));
-        recipes.add(new Recipe("3", "Three", "3", "3", "3", "3", "3"));
 
-        // Set the recipe list and notify the adapter of the change
+
         adapter.setRecipeList(recipes);
         adapter.notifyDataSetChanged();
     }
@@ -63,7 +61,7 @@ public class NotificationsFragment extends Fragment {
     private void loadProfile() {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        reference.child("users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
+        reference.child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -85,12 +83,12 @@ public class NotificationsFragment extends Fragment {
                                     .placeholder(R.drawable.bg_default_recipe)
                                     .into(binding.imgCover);
                         } else {
-                            Log.e("ProfileFragment", "onDataChange: User is null");
+                            Log.e("NotificationsFragment", "onDataChange: User is null");
                         }
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
-                        Log.e("ProfileFragment", "onCancelled: " + error.getMessage());
+                        Log.e("NotificationsFragment", "onCancelled: " + error.getMessage());
                     }
                 });
 
