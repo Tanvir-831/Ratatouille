@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SingUpActivity">
+
+    <ImageView
+        android:id="@+id/imageRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/foreground_design"
+        android:scaleType="center"
+        app:srcCompat="@drawable/background"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="253dp"
+        android:layout_height="71dp"
+        android:fontFamily="@font/lobster"
+        android:text="@string/ratatouille"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageRegistration"
+        app:layout_constraintVertical_bias="0.131" />
+
+    <TextView
+        android:id="@+id/tagline"
+        android:layout_width="114dp"
+        android:layout_height="47dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="bold"
+        android:text="@string/registration"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageRegistration"
+        app:layout_constraintVertical_bias="0.258" />
+
+    <EditText
+        android:id="@+id/et_Name"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:drawableLeft="@drawable/baseline_account_circle_24"
+        android:hint="@string/name"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:inputType="text"
+        android:backgroundTint="#CCCCCC"
+        android:textColorHint="@color/white"
+        android:drawablePadding="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/tagline"
+        app:layout_constraintVertical_bias="0.139" />
+
+    <EditText
+        android:id="@+id/et_Email"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#CCCCCC"
+        android:drawableLeft="@drawable/baseline_email_24"
+        android:drawablePadding="13dp"
+        android:hint="@string/email"
+        android:textColor="@color/white"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/tagline"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <EditText
+        android:id="@+id/et_Password"
+        android:layout_width="331dp"
+        android:layout_height="48dp"
+        android:backgroundTint="#CCCCCC"
+        android:drawableLeft="@drawable/baseline_key_24"
+        android:drawablePadding="13dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/tagline"
+        app:layout_constraintVertical_bias="0.434" />
+
+    <Button
+        android:id="@+id/btn_Signup"
+        android:layout_width="263dp"
+        android:layout_height="59dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="sans-serif"
+        android:text="Register"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageRegistration"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.855" />
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="209dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif"
+        android:padding="10dp"
+        android:text="Already Registered ?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageRegistration"
+        app:layout_constraintVertical_bias="0.93" />
+
+    <TextView
+        android:id="@+id/tv_Login"
+        android:layout_width="126dp"
+        android:layout_height="50dp"
+        android:fontFamily="sans-serif"
+        android:onClick="login"
+        android:padding="10dp"
+        android:text="Sign in"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageRegistration"
+        app:layout_constraintVertical_bias="0.93"
+        tools:ignore="OnClick" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,25 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Gradient with professional colors -->
+    <gradient
+        android:startColor="#2193b0"
+        android:endColor="#6dd5ed"
+        android:angle="45" />
+
+    <!-- Rounded corners for a polished feel -->
+    <corners
+        android:radius="24dp" />
+
+    <!-- Inner padding for a soft depth effect -->
+    <padding
+        android:left="4dp"
+        android:top="4dp"
+        android:right="4dp"
+        android:bottom="4dp" />
+
+    <!-- Soft glow stroke -->
+    <stroke
+        android:width="3dp"
+        android:color="#cce7ff" /> <!-- Light blue for subtle glowing effect -->
+</shape>
